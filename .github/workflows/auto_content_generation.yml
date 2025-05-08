@@ -16,7 +16,8 @@ jobs:
           python-version: 3.11
 
       - name: Install dependencies
-        run: pip install openai python-frontmatter
+        run: python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Generate Social Posts
         run: python3 scripts/generate-social.py
