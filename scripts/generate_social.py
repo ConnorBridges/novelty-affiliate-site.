@@ -28,7 +28,7 @@ def generate_social_snippets(post_dir, output_dir):
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input_dir', required=True, help='Directory of markdown posts')
+    parser.add_argument('--input_dir', default='reference_articles', help='Directory of markdown posts')
     parser.add_argument('--output_dir', required=True, help='Directory for social snippets')
     args = parser.parse_args()
     openai.api_key = os.getenv('OPENAI_API_KEY')
