@@ -1,0 +1,37 @@
+on  schedule:
+    - cron: '0 9 * * *' # Every day at 9 AM UTC
+  workflow_dispatch:     # Allow manual triggering
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: pip install openai python-frontmatter
+
+      - name: Generate Social Posts
+        run: python3 scripts/generate-social.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name: Generate Email Copy
+        run: python3 scripts/generate-emails.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Daily AI content update" || echo "No changes to commit"
+          git push
+
