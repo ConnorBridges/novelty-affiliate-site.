@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="font-sans text-gray-900 bg-gray-50">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold text-green-600">
+        noveltynuvoe
+      </a>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="/" class="hover:text-green-600">Home</a></li>
+          <li><a href="/categories/" class="hover:text-green-600">Categories</a></li>
+          <li><a href="/blog/" class="hover:text-green-600">Blog</a></li>
+          <li><a href="/about/" class="hover:text-green-600">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner bg-gray-200 py-8">
+    <div class="carousel mx-auto max-w-7xl px-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div>
+        <img src="/assets/images/novelty_nuvoe_test_image1.jpeg" alt="Product 1" class="w-full h-auto rounded shadow">
+      </div>
+      <div>
+        <img src="/assets/images/novelty_nuvoe_test_image2.jpeg" alt="Product 2" class="w-full h-auto rounded shadow">
+      </div>
+      <div>
+        <img src="/assets/images/novelty_nuvoe_test_image3.jpeg" alt="Product 3" class="w-full h-auto rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <!-- Page content -->
+  <main class="mt-8">
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-400 py-6 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      <ul class="flex justify-center gap-6 mb-4">
+        <li><a href="/about/" class="hover:text-white">About</a></li>
+        <li><a href="/contact/" class="hover:text-white">Contact</a></li>
+        <li><a href="/privacy/" class="hover:text-white">Privacy Policy</a></li>
+      </ul>
+      <p>&copy; {{ "now" | date: "%Y" }} noveltynuvoe.com</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+products:
+  - title: "Meme Reaction Lamp"
+    tagline: "Lights up your mood (and your memes)"
+    image: "/assets/images/reaction-lamp.jpg"
+    url: "https://amazon.com/dp/EXAMPLE?tag=noveltynuvoe-20"
+  - title: "Unicorn Shower Steamers"
+    tagline: "Turn your shower into a unicorn sanctuary"
+    image: "/assets/images/unicorn-steamers.jpg"
+    url: "https://amazon.com/dp/EXAMPLE2?tag=noveltynuvoe-20"
+  - title: "Retro Handheld Arcade"
+    tagline: "Pocket-sized nostalgia"
+    image: "/assets/images/handheld-arcade.jpg"
+    url: "https://amazon.com/dp/EXAMPLE3?tag=noveltynuvoe-20"

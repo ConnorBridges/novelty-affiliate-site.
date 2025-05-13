@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    .carousel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .carousel-inner {
+      width: 100%;
+    }
+
+    .carousel-item {
+      display: none;
+      width: 100%;
+    }
+
+    .carousel-item.active {
+      display: block;
+    }
+
+    .carousel-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .carousel-nav button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 0.375rem;
+    }
+
+    .carousel-nav button:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-900 bg-gray-50">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold text-green-600">
+        noveltynuvoe
+      </a>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="/" class="hover:text-green-600">Home</a></li>
+          <li><a href="/categories/" class="hover:text-green-600">Categories</a></li>
+          <li><a href="/blog/" class="hover:text-green-600">Blog</a></li>
+          <li><a href="/about/" class="hover:text-green-600">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner bg-gray-200 py-8">
+    <div class="carousel">
+      <div class="carousel-nav">
+        <button class="carousel-prev">&#9650; Previous</button>
+      </div>
+
+      <div class="carousel-inner">
+        <img src="/assets/images/novelty_nuvoe_test_image1.jpeg" alt="Product 1" class="carousel-item active w-full h-auto mb-4 rounded shadow">
+        <img src="/assets/images/novelty_nuvoe_test_image2.jpeg" alt="Product 2" class="carousel-item w-full h-auto mb-4 rounded shadow">
+        <img src="/assets/images/novelty_nuvoe_test_image3.jpeg" alt="Product 3" class="carousel-item w-full h-auto mb-4 rounded shadow">
+      </div>
+
+      <div class="carousel-nav">
+        <button class="carousel-next">&#9660; Next</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page content -->
+  <main class="mt-8">
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-400 py-6 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      <ul class="flex justify-center gap-6 mb-4">
+        <li><a href="/about/" class="hover:text-white">About</a></li>
+        <li><a href="/contact/" class="hover:text-white">Contact</a></li>
+        <li><a href="/privacy/" class="hover:text-white">Privacy Policy</a></li>
+      </ul>
+      <p>&copy; {{ "now" | date: "%Y" }} noveltynuvoe.com</p>
+    </div>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    function showImage(index) {
+      items.forEach((item, i) => {
+        item.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % totalItems;
+      showImage(currentIndex);
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      showImage(currentIndex);
+    }
+
+    document.querySelector('.carousel-next').addEventListener('click', nextImage);
+    document.querySelector('.carousel-prev').addEventListener('click', prevImage);
+
+    // Initial display
+    showImage(currentIndex);
+  </script>
+
+</body>
+</html>
