@@ -105,6 +105,7 @@ body {
 
 .autoplay-toggle:hover {
     background-color: #45a049;
+    display: none;
 }
 
 /* Reference Dropdown */
