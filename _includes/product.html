@@ -1,0 +1,9 @@
+<div class='product-card'>Placeholder for product card</div>
+<img src="{{ include.product.image }}" alt="{{ include.product.name }}" />
+<h3>{{ include.product.name }}</h3>
+<p>{{ include.product.description }}</p>
+<a href="https://www.amazon.com/dp/{{ include.product.asin }}?tag={{ site.amazon_affiliate_id }}"
+   target="_blank" rel="nofollow sponsored">
+  Buy on Amazon
+</a>
+</div>

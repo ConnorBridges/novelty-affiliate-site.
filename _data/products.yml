@@ -1,0 +1,51 @@
+# _data/products.yml
+
+- name: Manta Sleep Mask PRO
+  description: "100% blackout, fully adjustable fit, breathable neoprene"
+  asin: B0C36K8SJJ
+  image: /assets/images/products/manta-pro.jpg
+
+- name: Gravity Weighted Sleep Mask
+  description: "5 oz of evenly distributed glass beads, ultra-soft cotton cover"
+  asin: B0B1RWJ4QJ
+  image: /assets/images/products/gravity-blanket-mask.jpg
+
+- name: Tempur-Pedic Sleep Mask
+  description: "Iconic TEMPUR® material molds to your face, lifetime durability"
+  asin: B0027OUUFW
+  image: /assets/images/products/tempur-pedic.jpg
+
+- name: Sleep Master Elite Mask
+  description: "Complete blackout with contoured eye cups and included earplugs"
+  asin: B0BB9Z23FD
+  image: /assets/images/products/sleep-master-elite.jpg
+
+- name: YFONG Weighted Sleep Mask
+  description: "75 g weight per eye cup, soft breathable jersey knit fabric"
+  asin: B09C5PD9VD
+  image: /assets/images/products/luna-75-weighted.jpg
+
+- name: Hatch Restore 3 Smart Sleep Assistant
+  description: "Sunrise-simulating alarm, guided wind-down content, white-noise library"
+  asin: B0DLLSCVZW
+  image: /assets/images/products/hatch-restore-3.jpg
+
+- name: Gravity Blanket (15 lb)
+  description: "Premium glass-bead weighted blanket for full-body deep-pressure therapy"
+  asin: B08CS22G7Z
+  image: /assets/images/products/gravity-blanket-15lb.jpg
+
+- name: MUSICOZY Sleep Headphones
+  description: "EEG-driven audio tones to boost slow-wave sleep"
+  asin: B09K4WZGVD
+  image: /assets/images/products/philips-smart-sleep.jpg
+
+- name: Olly Sleep Gummies (70 ct)
+  description: "Melatonin + L-Theanine, natural fruit flavors"
+  asin: B07H8NZZJB
+  image: /assets/images/products/olly-sleep-gummies.jpg
+
+- name: Klova Extra Strength Sleep Patches (6mg) Melatonin
+  description: "Guided breathing light system—projects a pulsing glow to synchronize your breath"
+  asin: B0BLHWS3W8
+  image: /assets/images/products/dodow-device.jpg
